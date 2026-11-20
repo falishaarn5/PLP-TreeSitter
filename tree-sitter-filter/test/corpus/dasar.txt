@@ -94,6 +94,6 @@ not archived = true
 
 (query
   (not_expression
-    (comparison
-      (identifier)
-      (boolean))))
+    expression: (comparison
+      left: (identifier)
+      right: (boolean))))
