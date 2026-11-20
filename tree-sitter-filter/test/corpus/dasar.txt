@@ -83,3 +83,17 @@ Ekspresi dengan Kurung Parenthesized
     (comparison
       (identifier)
       (number))))
+
+==========================
+Ekspresi NOT dan Boolean
+==========================
+
+not archived = true
+
+---
+
+(query
+  (not_expression
+    (comparison
+      (identifier)
+      (boolean))))

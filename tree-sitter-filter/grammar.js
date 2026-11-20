@@ -12,7 +12,8 @@ module.exports = grammar({
       $.comparison,
       $.and_expression,
       $.or_expression,
-      $.parenthesized
+      $.parenthesized,
+      $.not_expression
     ),
 
     and_expression: $ => prec.left(2, seq(
@@ -32,15 +33,21 @@ module.exports = grammar({
       $._expr,
       ')'
     ),
+
+    not_expression: $ => prec(3, seq(
+      'not',
+      $._expr
+    )),
     
     comparison: $ => seq(
       $.identifier,
       choice('=', '!=', '>', '<', '>=', '<='),
-      choice($.string, $.number)
+      choice($.string, $.number, $.boolean)
     ),
 
     identifier: $ => /[a-zA-Z_][a-zA-Z0-9_.]*/,
     string: $ => /"[^"]*"/,
     number: $ => /[0-9]+/,
+    boolean: $ => choice('true', 'false'),
   }
 });
