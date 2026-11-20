@@ -1,0 +1,17 @@
+// output langkah 2
+@id  baris 2: sisi
+@id  baris 2: sisi
+@id  baris 2: luas
+@id  baris 1: sisi
+@id  baris 3: luas
+@id  baris 5: hasil
+@id  baris 5: hitung_luas_persegi
+@id  baris 6: print
+@id  baris 1: hitung_luas_persegi
+@id  baris 6: hasil
+
+// output langkah 3
+@nama  baris 1: hitung_luas_persegi
+
+// output langkah 4
+hitung_luas_persegi 1
