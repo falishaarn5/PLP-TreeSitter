@@ -34,3 +34,40 @@ module [1:0]
 hasil query import:
 @modul  baris 1: os
 @modul  baris 2: pathlib
+
+// output ast docstring
+module [1:0]
+  function_definition [1:0]
+    name: identifier [1:4]
+    parameters: parameters [1:23]
+      identifier [1:24]
+    body: block [2:4]
+      expression_statement [2:4]
+        string [2:4]
+          string_start [2:4]
+          string_content [2:7]
+          string_end [2:59]
+      expression_statement [3:4]
+        assignment [3:4]
+          left: identifier [3:4]
+          right: binary_operator [3:11]
+            left: identifier [3:11]
+            right: identifier [3:18]
+      return_statement [4:4]
+        identifier [4:11]
+  expression_statement [6:0]
+    assignment [6:0]
+      left: identifier [6:0]
+      right: call [6:8]
+        function: identifier [6:8]
+        arguments: argument_list [6:27]
+          integer [6:28]
+  expression_statement [7:0]
+    call [7:0]
+      function: identifier [7:0]
+      arguments: argument_list [7:5]
+        identifier [7:6]
+
+hasil query docstring:
+@nama  baris 1: hitung_luas_persegi
+@docstring  baris 2: """Menghitung luas persegi berdasarkan panjang sisinya."""
