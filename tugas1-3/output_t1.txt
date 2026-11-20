@@ -2,7 +2,18 @@
 (module (expression_statement (assignment left: (identifier) right: (integer))) (if_statement condition: (comparison_operator (identifier) (integer)) consequence: (block (expression_statement (call function: (identifier) arguments: (argument_list (string (string_start) (string_content) (string_end))))))))
 (module (class_definition name: (identifier) body: (block (function_definition name: (identifier) parameters: (parameters (identifier) (identifier)) body: (block (return_statement (binary_operator left: (identifier) right: (identifier))))))))
 
-(module (function_definition name: (identifier) parameters: (parameters (identifier)) body: (block (return_statement (binary_operator left: (identifier) right: (identifier))))))
+// output langkah 4
+// pada fungsi hitung_luas_persegi mendapatkan node anonim pada def, :, (, )
+(module N
+    (function_definition N
+        name: (identifier) N
+        parameters: (parameters N
+            (identifier)) N
+        body: (block N
+            (return_statement N
+                (binary_operator N
+                    left: (identifier) N
+                    right: (identifier)))))) N
 def anonim
 identifier bernama
 parameters bernama
@@ -11,3 +22,12 @@ block bernama
 ( anonim
 identifier bernama
 ) anonim
+return anonim
+* anonim
+
+// output langkah 5
+(module (ERROR (identifier) (parameters (identifier)) (return_statement (binary_operator left: (identifier) right: (identifier)))))
+def anonim
+identifier bernama
+parameters bernama
+return_statement bernama
