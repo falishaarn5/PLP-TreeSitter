@@ -19,3 +19,18 @@ hitung_luas_persegi 1
 // output langkah 5
 @fn  baris 6: print
 @args  baris 6: (hasil)
+
+// output langkah 6
+module [1:0]
+  import_statement [1:0]
+    name: dotted_name [1:7]
+      identifier [1:7]
+  import_from_statement [2:0]
+    module_name: dotted_name [2:5]
+      identifier [2:5]
+    name: dotted_name [2:20]
+      identifier [2:20]
+
+hasil query import:
+@modul  baris 1: os
+@modul  baris 2: pathlib
