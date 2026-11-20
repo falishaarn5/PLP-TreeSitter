@@ -1,0 +1,10 @@
+# Virtual environment Python
+.venv/
+venv/
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# File sementara
+.DS_Store
