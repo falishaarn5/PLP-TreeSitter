@@ -1,8 +1,23 @@
 module.exports = grammar({
   name: 'filter',
+
   extras: $ => [/\s/],
+
+  word: $ => $.identifier,
+
   rules: {
-    query: $ => $.comparison,
+    query: $ => $._expr,
+
+    _expr: $ => choice(
+      $.comparison,
+      $.and_expression
+    ),
+
+    and_expression: $ => prec.left(1, seq(
+      $._expr,
+      'and',
+      $._expr
+    )),
 
     comparison: $ => seq(
       $.identifier,
