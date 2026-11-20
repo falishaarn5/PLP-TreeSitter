@@ -13,7 +13,8 @@ module.exports = grammar({
       $.and_expression,
       $.or_expression,
       $.parenthesized,
-      $.not_expression
+      $.not_expression,
+      $.in_expression
     ),
 
     and_expression: $ => prec.left(2, seq(
@@ -38,16 +39,30 @@ module.exports = grammar({
       'not',
       field('expression', $._expr)
     )),
+
+    in_expression: $ => seq(
+      field('left', $.identifier),
+      'in',
+      '(',
+      field('value', $._value),
+      repeat(seq(',', field('value', $._value))),
+      ')'
+    ),
     
     comparison: $ => seq(
       field('left', $.identifier),
       field('operator', choice('=', '!=', '>', '<', '>=', '<=')),
-      field('right', choice($.string, $.number, $.boolean))
+      field('right', $._value)
     ),
 
     identifier: $ => /[a-zA-Z_][a-zA-Z0-9_.]*/,
     string: $ => /"[^"]*"/,
     number: $ => /[0-9]+/,
     boolean: $ => choice('true', 'false'),
+    _value: $ => choice(
+      $.string,
+      $.number,
+      $.boolean
+    ),
   }
 });

@@ -97,3 +97,18 @@ not archived = true
     expression: (comparison
       left: (identifier)
       right: (boolean))))
+
+=============
+Operator IN 
+=============
+
+status in ("open", "pending", "closed")
+
+---
+
+(query
+  (in_expression
+    left: (identifier)
+    value: (string)
+    value: (string)
+    value: (string)))
