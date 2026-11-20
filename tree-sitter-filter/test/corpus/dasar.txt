@@ -117,7 +117,7 @@ status in ("open", "pending", "closed")
 Operator CONTAINS
 ==========================
 
-name contains "admin"
+title contains "invoice"
 
 ---
 
