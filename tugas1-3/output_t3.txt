@@ -15,3 +15,7 @@
 
 // output langkah 4
 hitung_luas_persegi 1
+
+// output langkah 5
+@fn  baris 6: print
+@args  baris 6: (hasil)
