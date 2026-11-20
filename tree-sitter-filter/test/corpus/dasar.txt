@@ -112,3 +112,16 @@ status in ("open", "pending", "closed")
     value: (string)
     value: (string)
     value: (string)))
+
+==========================
+Operator CONTAINS
+==========================
+
+name contains "admin"
+
+---
+
+(query
+  (contains_expression
+    left: (identifier)
+    right: (string)))

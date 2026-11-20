@@ -16,6 +16,10 @@
             "named": true
           },
           {
+            "type": "contains_expression",
+            "named": true
+          },
+          {
             "type": "in_expression",
             "named": true
           },
@@ -43,6 +47,10 @@
           },
           {
             "type": "comparison",
+            "named": true
+          },
+          {
+            "type": "contains_expression",
             "named": true
           },
           {
@@ -135,6 +143,32 @@
     }
   },
   {
+    "type": "contains_expression",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "in_expression",
     "named": true,
     "fields": {
@@ -185,6 +219,10 @@
             "named": true
           },
           {
+            "type": "contains_expression",
+            "named": true
+          },
+          {
             "type": "in_expression",
             "named": true
           },
@@ -221,6 +259,10 @@
             "named": true
           },
           {
+            "type": "contains_expression",
+            "named": true
+          },
+          {
             "type": "in_expression",
             "named": true
           },
@@ -248,6 +290,10 @@
           },
           {
             "type": "comparison",
+            "named": true
+          },
+          {
+            "type": "contains_expression",
             "named": true
           },
           {
@@ -287,6 +333,10 @@
             "named": true
           },
           {
+            "type": "contains_expression",
+            "named": true
+          },
+          {
             "type": "in_expression",
             "named": true
           },
@@ -321,6 +371,10 @@
         },
         {
           "type": "comparison",
+          "named": true
+        },
+        {
+          "type": "contains_expression",
           "named": true
         },
         {
@@ -380,6 +434,10 @@
   },
   {
     "type": "and",
+    "named": false
+  },
+  {
+    "type": "contains",
     "named": false
   },
   {

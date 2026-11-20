@@ -33,6 +33,10 @@
         {
           "type": "SYMBOL",
           "name": "in_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "contains_expression"
         }
       ]
     },
@@ -186,6 +190,31 @@
         {
           "type": "STRING",
           "value": ")"
+        }
+      ]
+    },
+    "contains_expression": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "left",
+          "content": {
+            "type": "SYMBOL",
+            "name": "identifier"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "contains"
+        },
+        {
+          "type": "FIELD",
+          "name": "right",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
         }
       ]
     },
