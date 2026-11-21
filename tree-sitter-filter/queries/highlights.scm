@@ -1,1 +1,2 @@
 (string) @string
+(number) @number
