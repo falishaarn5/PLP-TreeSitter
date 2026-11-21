@@ -9,6 +9,21 @@ parser = Parser(PY)
 Q_TODO = Query(PY, '((comment) @c (#match? @c "TODO|FIXME"))')
 Q_FUNGSI = Query(PY, '(function_definition name: (identifier) @nama) @fungsi')
 
+def cari_error(node):
+    # Periksa apakah node saat ini merupakan error
+    # atau token yang hilang
+    if node.is_error or node.is_missing:
+        return node
+
+    # Telusuri setiap child secara rekursif
+    for child in node.children:
+        hasil = cari_error(child)
+
+        if hasil is not None:
+            return hasil
+
+    return None
+
 def cek_file(path):
     tree = parser.parse(path.read_bytes())
 
@@ -36,7 +51,18 @@ def cek_file(path):
                 f"Fungsi '{nama_fungsi}' terlalu panjang "
                 f"({jumlah_baris} baris)"
             )
+
     # Fitur 3 (TODO): file yang pohonnya mengandung error
+    if tree.root_node.has_error:
+        node_error = cari_error(tree.root_node)
+
+        if node_error is not None:
+            baris_error = node_error.start_point[0] + 1
+
+            print(
+                f"{path}:{baris_error}: "
+                f"Ditemukan kesalahan sintaks Python"
+            )
 
 for path in Path(sys.argv[1]).rglob("*.py"):
     cek_file(path)
