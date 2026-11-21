@@ -14,3 +14,4 @@
 
 "and" @keyword
 "or" @keyword
+"not" @keyword

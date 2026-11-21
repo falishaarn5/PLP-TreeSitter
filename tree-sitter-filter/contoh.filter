@@ -1,1 +1,1 @@
-status = "open" and priority >= 2 or active = true
+status = "open" and priority >= 2 or not active = true
