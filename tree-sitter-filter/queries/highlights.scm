@@ -13,3 +13,4 @@
 ] @operator
 
 "and" @keyword
+"or" @keyword
