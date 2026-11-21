@@ -71,4 +71,3 @@ Dua file diperiksa secara manual:
 | `tests/test_simple.py` | Fungsi `test_add_one()` terdiri dari 2 baris, tanpa TODO/FIXME atau kesalahan sintaks. |
 
 Hasil pemeriksaan manual pada kedua file sesuai dengan hasil program.
-
