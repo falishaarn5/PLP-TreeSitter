@@ -2,3 +2,12 @@
 (number) @number
 (boolean) @constant.builtin
 (identifier) @property
+
+[
+  "="
+  "!="
+  ">"
+  "<"
+  ">="
+  "<="
+] @operator
