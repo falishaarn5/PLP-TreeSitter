@@ -11,3 +11,5 @@
   ">="
   "<="
 ] @operator
+
+"and" @keyword
