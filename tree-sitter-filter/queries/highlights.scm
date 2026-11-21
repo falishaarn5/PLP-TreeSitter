@@ -16,3 +16,4 @@
 "or" @keyword
 "not" @keyword
 "in" @keyword
+"contains" @keyword
