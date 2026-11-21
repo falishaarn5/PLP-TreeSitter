@@ -15,3 +15,4 @@
 "and" @keyword
 "or" @keyword
 "not" @keyword
+"in" @keyword
