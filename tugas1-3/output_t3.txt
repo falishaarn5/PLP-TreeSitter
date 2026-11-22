@@ -28,6 +28,35 @@ module [1:0]
   import_from_statement [2:0]
     module_name: dotted_name [2:5]
       identifier [2:5]
+
+// Pengujian tambahan menggunakan kecil.py (108 baris)
+
+Hasil query print:
+Hitungan manual: 18 pemanggilan print()
+Hasil query: 18 pemanggilan print()
+Kesimpulan: sesuai.
+
+Hasil query import sebelum perbaikan:
+Tidak ada capture, padahal terdapat 2 import dengan alias.
+
+Hasil query import setelah perbaikan:
+@modul  baris 1: networkx
+@modul  baris 2: matplotlib.pyplot
+Hitungan manual: 2
+Hasil query: 2
+Kesimpulan: sesuai.
+
+Hasil query docstring:
+Hitungan manual: 0
+Hasil query: 0
+Kesimpulan: sesuai.
+
+Kendala:
+Query import awal belum menangani node aliased_import.
+
+Solusi:
+Menambahkan pola aliased_import pada import.scm.
+Pengujian ulang berhasil mendeteksi kedua modul.
     name: dotted_name [2:20]
       identifier [2:20]
 
