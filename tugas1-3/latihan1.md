@@ -3,7 +3,7 @@
 ### Percobaan 1: x = 1
 module [0, 0] - [1, 0]
   expression_statement [0, 0] - [0, 5]
-    binary_operator [0, 0] - [0, 5]
+    assignment [0, 0] - [0, 5]
       left: identifier [0, 0] - [0, 1]
       right: integer [0, 4] - [0, 5]
 
